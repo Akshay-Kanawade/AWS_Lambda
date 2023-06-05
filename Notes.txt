@@ -1,0 +1,61 @@
+Aws services to deploy 
+used EC2 / cloud formation (Iaas) / Elastic beanstalk (Baas)
+
+using cloud things to solve problem / scalable / pay as per used
+
+
+Adv :
+ speed /low infrastructure cost /scalability / reliability / usage based coast 
+
+
+Nano services - 
+ next gen of microservice
+ do one thing
+ async event based triggers
+
+
+
+Aws lambda : 
+ - compute services allows to write code and run response as event to other resources 
+  interact other resources 
+   having handler fun to interact 
+   security - use iam resource policy  to invoke
+   add iam role for handler to use / interact with other resource as per the permissions
+
+
+Baas services : backend as services
+ server -top->app -top->fun
+ Faas :
+  lambda fun - trigger by event s3 /sns/ dynamodb
+
+
+lambda : 
+    lambda invoke ===> create lambda host env => lambda vm
+    => lambda runtime => invoke lambda fun
+    
+invocation type and modes:
+    using GUI
+    console
+    cli/sdk
+    api getway
+    Modes : 
+        sync - api getway , cloudfront, alexa  ==return response
+        async - s3, sns, cloudformation == 
+        polling - not trigger if data present then it works  - sqs,dynamo db streams, kinesis data streams
+
+    
+BOTO3 : 
+    aws lib to interact aws cloud
+
+15 min to complete works for lambda
+1000 exec at a time
+4 kb env var
+64 mb for sync param
+256 mb for Async param
+charges only time to run fun and memory.
+
+Cloud formation : create zip - upload to s3 - create Iam - resources - fun - configure permissions
+
+SAM CLI: 
+    superset of cloud formation
+    sam build /sam deploy
